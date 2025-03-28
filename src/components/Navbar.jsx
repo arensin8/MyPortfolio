@@ -27,15 +27,15 @@ const Navbar = () => {
         <img src={logo} alt="logo" className='w-9 
         h-9 object-contain'/>
         <p
-        className='text-white text-[18px] font-bold cursor-pointer'>
-          Aren Sinaei <span className='sm:block hidden'>| Portfolio</span></p>
+        className='text-white text-[18px] font-bold cursor-pointer flex'>
+          Aren &nbsp; <span className='sm:block hidden'> | Portfolio</span></p>
       </Link>
       <ul className='list-none hidden sm:flex flex-row gap-10'>
         {navLinks.map((link) => (
           <li key={link.id} 
           className={`
           ${active === link.title ? "text-white"
-          :"text-secondary"} hover:text-white text-[18px] fobt-medium curspor-pointer`}
+          :"text-secondary"} hover:text-white text-[18px] font-medium curspor-pointer`}
           onClick={() => setActive(link.title)}
           >
             <a href={`#${link.id}`}>{link.title}</a>
@@ -53,7 +53,23 @@ const Navbar = () => {
 
       <div className={
         `${!toggle ? 'hidden' : 'flex'} p-6 absolute black-gradient right-0
-        top-20 mx-4 my-2 z-10 min-w-[140px] rounded-xl`}></div>
+        top-20 mx-4 my-2 z-10 min-w-[140px] rounded-xl`}>
+          <ul className='list-none flex justify-end items-start flex-col gap-4'>
+        {navLinks.map((link) => (
+          <li key={link.id} 
+          className={`
+          ${active === link.title ? "text-white"
+          :"text-secondary"}  font-poppins font-medium text-[16px] curspor-pointer`}
+          onClick={() => {
+            setActive(link.title);
+            setToggle(!toggle)
+          }}
+          >
+            <a href={`#${link.id}`}>{link.title}</a>
+          </li>
+        ))}
+      </ul>
+        </div>
     </div>
     </nav>
 
