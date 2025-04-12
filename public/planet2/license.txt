@@ -1,0 +1,11 @@
+Model Information:
+* title:	Earth
+* source:	https://sketchfab.com/3d-models/earth-9d9192dfcdfd48b3ac15f0f03dfd9d2c
+* author:	Gaby Vaillancourt  ≠ (https://sketchfab.com/gabyvaillancourt)
+
+Model License:
+* license type:	CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions can not be distributed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Earth" (https://sketchfab.com/3d-models/earth-9d9192dfcdfd48b3ac15f0f03dfd9d2c) by Gaby Vaillancourt  ≠ (https://sketchfab.com/gabyvaillancourt) licensed under CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)

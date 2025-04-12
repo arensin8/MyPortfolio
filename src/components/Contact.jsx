@@ -15,11 +15,50 @@ const Contact = () => {
     message : ''
   })
 
+  //template_6pjhows
+  //service_xqijdc9
+  //tgX1SRIMQ-YeBM9hx
+
   const [loading , setLoading] = useState(false);
 
-  const handleChange = (e) => {};
+  const handleChange = (e) => {
+    const {name , value} = e.target;
 
-  const handleSubmit = (e) => {}
+    setForm({...form, [name] : value})
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    emailjs.send(
+      'service_xqijdc9',
+      'template_6pjhows',
+      {
+        from_name : form.name,
+        to_name : 'Aren',
+        from_email : form.email,
+        to_email : 'arensinani1@gmail.com',
+        message : form.message
+      },
+      'tgX1SRIMQ-YeBM9hx'
+      )
+      .then(() => {
+        setLoading(false);
+        alert('Thank You. I will get back to you as soon as possible.')
+
+        setForm({
+          name : '',
+          email : '',
+          message : ''
+        })
+      } , (error) => {
+        setLoading(false);
+        console.log(error.message);
+
+        alert("Something went wrong!")
+      })
+  }
 
 
 
