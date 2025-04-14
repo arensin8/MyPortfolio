@@ -5,6 +5,7 @@ import {EarthCanvas} from './canvas'
 import emailjs from '@emailjs/browser'
 import { SectionWrapper } from '../hoc';
 import { slideIn } from '../utils/motion';
+import { ToastContainer, toast } from 'react-toastify';
 
 const Contact = () => {
 
@@ -33,10 +34,10 @@ const Contact = () => {
 
     emailjs.send(
       'service_xqijdc9',
-      'template_6pjhows',
+      'template_9j8wlds',
       {
         from_name : form.name,
-        to_name : 'Aren',
+        // to_name : 'Aren',
         from_email : form.email,
         to_email : 'arensinani1@gmail.com',
         message : form.message
@@ -45,7 +46,7 @@ const Contact = () => {
       )
       .then(() => {
         setLoading(false);
-        alert('Thank You. I will get back to you as soon as possible.')
+        toast.success('Thank You.😊 I will get back to you as soon as possible.');
 
         setForm({
           name : '',
@@ -56,7 +57,7 @@ const Contact = () => {
         setLoading(false);
         console.log(error.message);
 
-        alert("Something went wrong!")
+        toast.error('Something went wrong! 😔',);
       })
   }
 
@@ -124,6 +125,12 @@ const Contact = () => {
         className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'>
           <EarthCanvas />
       </motion.div>
+
+      
+      <ToastContainer
+  position="top-right"
+  style={{ marginTop: '80px' }} // adjust the value as needed
+/>
     </div>
   );
 };

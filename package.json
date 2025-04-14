@@ -20,6 +20,7 @@
     "react-dom": "^19.0.0",
     "react-parallax-tilt": "^1.7.288",
     "react-router-dom": "^7.4.0",
+    "react-toastify": "^11.0.5",
     "react-vertical-timeline-component": "^3.5.3",
     "three": "^0.175.0"
   },
