@@ -4,7 +4,7 @@ import {
   creator,
   web,
   javascript,
-  typescript,
+  nextjs,
   html,
   css,
   reactjs,
@@ -74,7 +74,7 @@ const technologies = [
   },
   {
     name: "Next",
-    icon: typescript,
+    icon: nextjs,
   },
   {
     name: "React JS",
@@ -103,10 +103,6 @@ const technologies = [
   {
     name: "git",
     icon: git,
-  },
-  {
-    name: "figma",
-    icon: figma,
   },
   {
     name: "docker",

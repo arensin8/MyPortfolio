@@ -128,9 +128,9 @@ const Contact = () => {
 
       
       <ToastContainer
-  position="top-right"
-  style={{ marginTop: '80px' }} // adjust the value as needed
-/>
+        position="top-right"
+        style={{ marginTop: '80px' }}
+      />
     </div>
   );
 };
