@@ -10,17 +10,14 @@ import { ToastContainer, toast } from 'react-toastify';
 const Contact = () => {
 
   const formRef = useRef();
+  const [loading , setLoading] = useState(false);
   const [form , setForm] = useState({
     name : '',
     email: '',
     message : ''
   })
 
-  //template_6pjhows
-  //service_xqijdc9
-  //tgX1SRIMQ-YeBM9hx
 
-  const [loading , setLoading] = useState(false);
 
   const handleChange = (e) => {
     const {name , value} = e.target;
@@ -28,16 +25,32 @@ const Contact = () => {
     setForm({...form, [name] : value})
   };
 
+  
+  const isValidEmail = (email) => {
+    // Basic email format check
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+  
   const handleSubmit = (e) => {
     e.preventDefault();
+  
+    if (!form.name || !form.email || !form.message) {
+      toast.error("Please fill out all fields.");
+      return;
+    }
+  
+    if (!isValidEmail(form.email)) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
+  
     setLoading(true);
-
+  
     emailjs.send(
       'service_xqijdc9',
       'template_9j8wlds',
       {
         from_name : form.name,
-        // to_name : 'Aren',
         from_email : form.email,
         to_email : 'arensinani1@gmail.com',
         message : form.message
@@ -47,7 +60,7 @@ const Contact = () => {
       .then(() => {
         setLoading(false);
         toast.success('Thank You.😊 I will get back to you as soon as possible.');
-
+  
         setForm({
           name : '',
           email : '',
@@ -56,10 +69,10 @@ const Contact = () => {
       } , (error) => {
         setLoading(false);
         console.log(error.message);
-
-        toast.error('Something went wrong! 😔',);
+  
+        toast.error('Something went wrong! 😔');
       })
-  }
+  };
 
 
 
@@ -113,9 +126,9 @@ const Contact = () => {
 
           <button
             type='submit'
-            className='bg-tertiary py-3 px-8 outlined-none text-white
-            font-bold w-fit shadow-md shadow-primary rounded-xl'>
-            {loading ? "Sending..." : 'Send'}
+            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
+          >
+            {loading ? "Sending..." : "Send"}
           </button>
         </form>
       </motion.div>
