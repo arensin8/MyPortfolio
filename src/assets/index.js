@@ -30,6 +30,7 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import university from "./university.png";
 
 export {
   logo,
@@ -55,6 +56,7 @@ export {
   nextjs,
   threejs,
   meta,
+  university,
   shopify,
   starbucks,
   tesla,

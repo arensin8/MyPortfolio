@@ -19,7 +19,7 @@ import {
   starbucks,
   tesla,
   shopify,
-  carrent,
+  university,
   jobit,
   tripguide,
   threejs,
@@ -154,7 +154,7 @@ const experiences = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "My Universities IT Department ",
     description:
       "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
     tags: [
@@ -171,8 +171,9 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: university,
+    source_code_link: "https://github.com/arensin8/UniPuplitProject",
+    source_code_link2: "https://aesthetic-trifle-5c2dec.netlify.app/",
   },
   {
     name: "Job IT",
