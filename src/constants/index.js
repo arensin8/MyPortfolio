@@ -23,6 +23,8 @@ import {
   jobit,
   tripguide,
   threejs,
+  food,
+  adminpanel,
 } from "../assets";
 
 export const navLinks = [
@@ -156,15 +158,11 @@ const projects = [
   {
     name: "My Universities IT Department ",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Web-based platform designed to guide new IT students by providing essential information such as their learning roadmap, course details, department news, and faculty insights—offering a clear and accessible introduction to the university's IT program.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
       },
       {
         name: "tailwind",
@@ -176,46 +174,43 @@ const projects = [
     source_code_link2: "https://aesthetic-trifle-5c2dec.netlify.app/",
   },
   {
-    name: "Job IT",
+    name: "Food Delivery Full Stack website",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Full-stack web application that allows users to explore food menus, place orders, and manage their cart—built using React, Node.js, and MongoDB to deliver a smooth and efficient food ordering experience.",
     tags: [
       {
         name: "react",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "mongodb",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
-        color: "pink-text-gradient",
+        name: "nodejs",
+        color: "green-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: food,
+    source_code_link: "https://github.com/arensin8/Food-Delivery",
+    source_code_link2: "https://coruscating-kitten-43867e.netlify.app/",
   },
   {
-    name: "Trip Guide",
+    name: "Admin panel",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Frontend admin panel interface designed to manage students, products, logs, and more—built with a modern UI to provide a clear, user-friendly experience for administrators handling university IT system data.",
     tags: [
       {
-        name: "nextjs",
+        name: "react",
         color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
       },
       {
         name: "css",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: adminpanel,
+    source_code_link: "https://github.com/arensin8/React-AdminPanel",
   },
 ];
 

@@ -31,6 +31,8 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import university from "./university.png";
+import food from "./food.png";
+import adminpanel from "./admin.png";
 
 export {
   logo,
@@ -63,4 +65,6 @@ export {
   carrent,
   jobit,
   tripguide,
+  food,
+  adminpanel,
 };

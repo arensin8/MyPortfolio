@@ -41,7 +41,8 @@ const ProjectCard = ({index,name, description , tags
                   className='w-1/2 h-1/2 object-contain' 
                 />
               </div>
-              <div 
+              {source_code_link2 ? 
+                <div 
                 onClick={() => window.open(
                 source_code_link2, "_blank"
                 )}
@@ -53,7 +54,8 @@ const ProjectCard = ({index,name, description , tags
                   alt="website"
                   className='w-1/2 h-1/2 object-contain rounded-full' 
                 />
-              </div>
+              </div>: ""}
+              
             </div>
           </div>
 
