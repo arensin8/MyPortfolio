@@ -37,10 +37,11 @@ const About = () => {
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview.</h2>
       </motion.div>
-      <motion.p 
-        variants={fadeIn('','',0.1,1)}
-        className='mt-4 text-secondary text-[17px]
-        max-w-3xl leading-[30px]'>
+
+      <div className='flex flex-col md:flex-row justify-between items-start'>
+        <motion.p 
+          variants={fadeIn('', '', 0.1, 1)}
+          className='mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'>
           I'm a passionate software developer 
           with experience in building web applications and 
           user interfaces using React, Node.js, and Express. 
@@ -48,7 +49,18 @@ const About = () => {
           that enhance user experience. With a strong problem-solving 
           mindset and attention to detail, I’m always eager to learn 
           and take on new challenges in web development.
-      </motion.p>
+        </motion.p>
+
+        
+          <button className='mr-10 mt-10 bg-tertiary py-2 px-6 rounded-lg
+            outline-none text-white h-[45px] w-auto
+            text-[14px] font-semibold shadow-md shadow-primary cursor-pointer'>
+            Get my resume
+          </button>
+      </div>
+
+
+
 
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service , index ) => (
