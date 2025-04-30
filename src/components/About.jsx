@@ -4,6 +4,7 @@ import {styles} from '../styles';
 import {fadeIn , textVariant} from '../utils/motion';
 import {services} from '../constants';
 import { SectionWrapper } from '../hoc';
+import resume from '../assets/ArenSinResume.pdf'
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
@@ -50,17 +51,16 @@ const About = () => {
           mindset and attention to detail, I’m always eager to learn 
           and take on new challenges in web development.
         </motion.p>
-
-        
-          <button className='mr-10 mt-10 bg-tertiary py-2 px-6 rounded-lg
-            outline-none text-white h-[45px] w-auto
-            text-[14px] font-semibold shadow-md shadow-primary cursor-pointer'>
-            Get my resume
-          </button>
+        <a
+          href={resume}
+          download
+          className='mr-10 mt-10 bg-tertiary/80 hover:bg-tertiary/60 py-3 px-6 rounded-lg
+          outline-none text-white h-[50px] w-full md:w-auto text-[16px] font-semibold 
+          shadow-md shadow-primary cursor-pointer text-center transition'
+        >
+          Download CV
+        </a>
       </div>
-
-
-
 
       <div className='mt-20 flex flex-wrap gap-10'>
         {services.map((service , index ) => (
