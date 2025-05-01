@@ -58,7 +58,7 @@ const About = () => {
           outline-none text-white h-[50px] w-full md:w-auto text-[16px] font-semibold 
           shadow-md shadow-primary cursor-pointer text-center transition'
         >
-          Download CV
+          Download my CV
         </a>
       </div>
 
